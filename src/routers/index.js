@@ -11,6 +11,7 @@ const category=require('./category.Router')
 const cateQr=require('./cate_qr.router')
 const order=require('./order.route')
 const payment=require('./payment.route')
+const orderDetail=require('./orderDetail.route')
 
 const webApi =(app)=>{
  
@@ -26,6 +27,8 @@ const webApi =(app)=>{
    app.use('/api/v1',cateQr)
    app.use('/api/v1',order)
    app.use('/api/v1',payment)
+   app.use('/api/v1',orderDetail)
+
 
 
 

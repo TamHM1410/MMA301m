@@ -6,7 +6,9 @@ const instance=require('../config/instance')
 class order_service{
     static updateOrder =async(data)=>{
         try{
-            
+            const updateOrder=await order.findByIdAndUpdate({
+                
+            })
 
         }catch(error){
             return {
@@ -18,9 +20,6 @@ class order_service{
     }
     static createOrder=async(data)=>{
         try{
-            instance()
-            const ordera=await order.find()
-            console.log(ordera,'check')
             const checkQr_id=await qr.findById({
                 _id:new mongoose.Types.ObjectId(data.qr_id)
 
