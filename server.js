@@ -6,7 +6,3 @@ const Port =process.env.PORT
 app.listen(Port,()=>{
     logger.info(`Server listen on PORT: ${Port} `)
 })
-
-
-
-
