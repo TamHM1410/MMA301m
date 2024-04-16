@@ -2,7 +2,9 @@ const express=require('express')
 const discountRouter=express.Router()
 const discountController=require('../controller/qr_discount.controller')
 
-discountRouter.post('/qr/:id/discounts',discountController.createDiscount)
-discountRouter.get('/qr/:id/discounts',discountController.getDiscount)
+discountRouter.post('/qrs/:id/discounts',discountController.createDiscount)
+discountRouter.get('/qrs/:id/discounts',discountController.getDiscount)
+discountRouter.patch('/qrs/:id/discounts',discountController.updateStatus)
+
 
 module.exports=discountRouter

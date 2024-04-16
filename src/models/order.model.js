@@ -29,6 +29,10 @@ var orderSchema = new mongoose.Schema({
     status:{
         type:Boolean,
         default:true
+    },
+    type:{
+        type:Number,
+        default:null
     }
   
 });

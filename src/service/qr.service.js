@@ -77,7 +77,7 @@ class QrService{
         try{
             instance()
        
-        const check=    await qr.findByIdAndDelete({_id:new mongoose.Types.ObjectId(id)})
+        const check= await qr.findByIdAndDelete({_id:new mongoose.Types.ObjectId(id)})
         if(!check){
             return {
                 status:'Item not found to delete',

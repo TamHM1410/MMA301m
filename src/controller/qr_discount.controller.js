@@ -35,6 +35,23 @@ class qr_discountController{
             })
 
         }}
+    static updateStatus =async (req,res)=>{
+        try{
+            let id=req.params.id
+            let result=await discountService.updateStatus(id)
+            return res.status(result.statusCode).json(result)
+
+
+        }catch(error){
+            return res.status(500).json({
+                status:'Internal server',
+                statusCode:500
+            })
+
+        }
+        
+
+    }
 
 }
 module.exports=qr_discountController
