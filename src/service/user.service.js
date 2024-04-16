@@ -5,7 +5,6 @@ const mongoose=require('mongoose')
 class UserService {
     static getUserData=async (id)=>{
         try{
-            instance()
             const userData=await user.findById({_id:new mongoose.Types.ObjectId(id)}).select('-password ')
             return  userData ? {
                 status:'Success',
@@ -28,7 +27,6 @@ class UserService {
     }
     static changePassword =async (data,id)=>{
         try{
-            instance()
             const checkUser= await user.findById({_id:new mongoose.Types.ObjectId(id)})
             const compare= await brcypt.compare(data.password,checkUser.password)
             if(compare===false){
